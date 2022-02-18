@@ -137,7 +137,7 @@ for i in range(6):
     elif res_lista[j][1].lower() == 'a':
       mantener = [amarillo(elem, res_lista[j][0]) for elem in words_5.palabra]
     else:
-      if not ((res_lista[j][0], 'a') in res_lista[:j+1]):
+      if not ((res_lista[j][0], 'a') in res_lista or (res_lista[j][0], 'v') in res_lista):
         mantener = [gris(elem, res_lista[j][0]) for elem in words_5.palabra]
       else:
         mantener = [duplicado(elem, res_lista[j][0], resultado_parcial, res_lista) for elem in words_5.palabra]
