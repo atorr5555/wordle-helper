@@ -7,6 +7,6 @@ Helper básico para Wordle, para obtener las palabras a utilizar se tomó el arc
 
 El programa muestra las sugerencias, se debe seleccionar una e ir introduciendo los resultados. Estos resultados deben ser una cadena de cinco caracteres donde cada caracter indica el color que regresó el Wordle, v si fue verde, a si fue amarillo y g si fue gris.
 
-![Ejecución](https://github.com/atorr5555/wordle-helper/blob/main/wordle2.PNG?raw=true)
+![Ejecución](https://github.com/atorr5555/wordle-helper/blob/main/wordle_43/wordle2.PNG?raw=true)
 
-![Resultados](https://github.com/atorr5555/wordle-helper/blob/main/wordle.PNG?raw=true)
+![Resultados](https://github.com/atorr5555/wordle-helper/blob/main/wordle_43/wordle.PNG?raw=true)
