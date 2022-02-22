@@ -92,7 +92,7 @@ def verde(s, a, i):
   return s[i] == a
 
 def amarillo(s, a, i):
-  return not (s[i] == a)
+  return (not (s[i] == a)) and (a in s)
 
 def gris(s, a):
   return not (a in s)
