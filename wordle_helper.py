@@ -104,10 +104,10 @@ def muestra(l):
     print(str(i) + '.- ' + elem)
     i += 1
 
-def duplicado(s, a, res_parcial, res_lista):
+def duplicado(s, a, res_lista):
   count_res = 0
-  for c in res_parcial:
-    if c == a:
+  for tup in res_lista:
+    if tup == (a, 'v'):
       count_res += 1
   
   count_am = 0
@@ -125,7 +125,6 @@ def duplicado(s, a, res_parcial, res_lista):
 
 """## Resolviendo el Wordle"""
 
-resultado_parcial = ['-', '-', '-', '-', '-']
 for i in range(6):
   recomendacion = words_5['palabra'].head().tolist()
   muestra(recomendacion)
@@ -146,7 +145,6 @@ for i in range(6):
   
   for j in range(5):
     if res_lista[j][1].lower() == 'v':
-      resultado_parcial[j] = res_lista[j][0]
       mantener = [verde(elem, res_lista[j][0], j) for elem in words_5.palabra]
     elif res_lista[j][1].lower() == 'a':
       mantener = [amarillo(elem, res_lista[j][0], j) for elem in words_5.palabra]
@@ -154,5 +152,5 @@ for i in range(6):
       if not ((res_lista[j][0], 'a') in res_lista or (res_lista[j][0], 'v') in res_lista):
         mantener = [gris(elem, res_lista[j][0]) for elem in words_5.palabra]
       else:
-        mantener = [duplicado(elem, res_lista[j][0], resultado_parcial, res_lista) for elem in words_5.palabra]
+        mantener = [duplicado(elem, res_lista[j][0], res_lista) for elem in words_5.palabra]
     words_5 = words_5[mantener]
